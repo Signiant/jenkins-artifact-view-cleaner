@@ -30,7 +30,7 @@ def findDirInViewList(dir,viewname,viewlist,debug):
     for jobview in viewlist['views']:
         if debug: print "Comparing job view %s to disk name %s" % (jobview['name'],job_view_name)
 
-        if jobview['name'] == job_view_name:
+        if jobview['name'].lower() == job_view_name.lower():
             if debug: print "** Found a match"
             found = True
             break
